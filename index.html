@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranav Kedia - Personal Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Pranav Kedia</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+            </ul>
+            <button class="md:hidden" onclick="toggleMenu()">Menu</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4">
+            <ul class="space-y-2">
+                <li><a href="#about" class="block hover:text-blue-600">About</a></li>
+                <li><a href="#skills" class="block hover:text-blue-600">Skills</a></li>
+                <li><a href="#projects" class="block hover:text-blue-600">Projects</a></li>
+                <li><a href="#contact" class="block hover:text-blue-600">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-32">
+            <div class="container mx-auto px-6 text-center">
+                <div class="w-32 h-32 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <span class="text-4xl">👤</span>
+                </div>
+                <h1 class="text-5xl font-bold mb-4">Pranav Kedia</h1>
+                <p class="text-xl mb-8">Computer Science Student | SWE Intern</p>
+                <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Get in Touch</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-6">About Me</h2>
+                <p class="text-lg max-w-2xl mx-auto">I am a Computer Science student at the Hong Kong Polytechnic University, currently working as an intern in a start-up in Hong Kong.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-4xl mb-4">💻</div>
+                        <h3 class="text-2xl font-semibold mb-4">Programming</h3>
+                        <p class="mb-4">Typescript & Java</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-600 h-2 rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-2xl font-semibold mb-4">Web</h3>
+                        <p class="mb-4">HTML, CSS, and JavaScript</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-600 h-2 rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        <div class="text-4xl mb-4">🛠️</div>
+                        <h3 class="text-2xl font-semibold mb-4">Tools</h3>
+                        <p class="mb-4">Version Control (Git)</p>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="bg-purple-600 h-2 rounded-full" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Past Projects/Achievements</h2>
+                <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4">Final Year Project</h3>
+                    <p class="text-lg">Working on databases for my final year project at Hong Kong Polytechnic University.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-12">Contact Me</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Personal Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Location</h3>
+                        <iframe src="https://maps.google.com/maps?q=Hong+Kong+Polytechnic+University&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-md"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Pranav Kedia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
